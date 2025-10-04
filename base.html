@@ -10,33 +10,24 @@
 </head>
 
 <body>
-
-    <section>
+    <div class="container">
         <div class="card">
             <div class="img-card"></div>
-             
-              <h6>Laptop Gamer AMD</h6>
-              <p>Precio base: $<span class="precio-inicial"></span> </p>
-        
-              <p>Cantidad:
-                <span class="cantidad">0</span>
-                <button 
-                >+</button>
-                <button
-                >-</button>
-              </p>
-            </div>
-
+            <h6>Laptop Gamer AMD</h6>
+            <p>Precio base: $<span id="precio-inicial"></span></p>
+            <p>Cantidad:
+                <span id="cantidad">0</span>
+                <button id="btn-sumar">+</button>
+                <button id="btn-restar">-</button>
+            </p>
         </div>
-    </section>
 
-    <div class="total-section">
-        <p>Total a pagar: $<span class="valor-total"></span> </p>
+        <div class="total-section">
+            <p>Total a pagar: $<span id="precio-total">0</span></p>
+        </div>
     </div>
 
-    <script src="js/index.js">
-      
-
-    </script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>

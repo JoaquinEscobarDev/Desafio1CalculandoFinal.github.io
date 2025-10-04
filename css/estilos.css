@@ -1,68 +1,120 @@
 * {
-    margin: 0
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #2c3e50, #7ba238);
+}
+
+.container {
+  display: flex;
+  margin-top: 10%;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .card {
-    color: rgba(255, 255, 255, 0.931);
-    width: 180px;
-    height: 270px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.692);
-    background: #7ba238;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  color: #fff;
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  background: #7ba238;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.4);
 }
 
 .card .img-card {
-    height: 150px;
-    background-image: url("../assets/notebook.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center ;
+  height: 150px;
+  background-image: url("../assets/notebook.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  animation: fadeIn 1s ease-in-out;
 }
 
-.card input {
-    width: 80%;
-    border-radius: 5px;
-    border: none;
-    padding: 3px 10px
+.card h6 {
+  font-size: 18px;
+  margin-bottom: 8px;
 }
 
-
+.card p {
+  margin: 6px 0;
+  font-size: 14px;
+}
 
 .card button {
-    background: #e2a30b;
-    color: white;
-    border-radius: 5px;
-    padding: 4px 8px;
+  background: #e2a30b;
+  color: white;
+  border-radius: 5px;
+  padding: 6px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.card button:hover {
+  background: #d18f08;
+  transform: scale(1.1);
+}
+
+.card button:active {
+  transform: scale(0.95);
 }
 
 .total-section {
-    width: 200px;
-    padding: 35px;
-    box-sizing: border-box;
+  width: 250px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: slideUp 1s ease;
 }
 
-.total-section .color {
-    display: flex;
+.total-section p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
 }
 
-.total-section .color div{
-    margin-left: 10px;
-    width: 20px;
-    height: 20px;
-    background-color: black;
-    border-radius: 50%;
-    border: solid 1px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
